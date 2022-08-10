@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import mtweb
+from mtweb import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', mtweb.views),
+    path('', views.index),
 ]
