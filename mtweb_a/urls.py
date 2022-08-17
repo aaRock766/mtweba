@@ -16,11 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
-app_name = "mtweb"
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include(('mtweb.urls', 'mtweb'), namespace='mtweb')),
-    path('', include('mtweb.urls', namespace='mtweb')),
+    path('', include(('mtweb.urls', 'mtweb'), namespace='mtweb')),
+    # path('', include('mtweb.urls', namespace='mtweb')),
 ]
